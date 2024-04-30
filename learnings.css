@@ -3,13 +3,41 @@
     height: 300px;
  }
  
- h1 {
-    font-size: 40;
-    text-align: left;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+h1{
+    font-family: Arial;
 }
 
-#head{
+h2{
+    font-family: Arial;
+    color:#f10000;
+}
+
+#timeline{
+    padding-left: 70px;
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+}
+
+.entry{
+    padding-left: 5%;
+}
+
+
+.imgtimeline{
+    float: right; 
+    margin: 5px;
+}
+#designing { 
+    color: red;
+}
+
+#safeID { 
+    color: #3563a9;
+}
+
+
+#head {
     background-color: rgb(33, 31, 32);
     display: grid;
 }
