@@ -310,7 +310,6 @@ button {
             border-width: 16px;
             height: 600px;
             border-color:  red;
-            border-color: blue;
         }
 
 
@@ -339,4 +338,30 @@ button {
     background-image: linear-gradient(red, rgb(33, 31, 32) 70%);
  
     height: 700px;
+}
+
+#learn-more .nice {
+    width:100%;
+}
+
+#learn-more p {
+    font-size: 30px;
+}
+
+#learn-more h1 {
+    font-size: 40px;
+    text-decoration:underline;
+    text-decoration-color: #f10000;
+}
+
+#learn-more #about{
+    font-size: 100px;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 20px;
+    text-decoration: underline;
+    padding: 20px;
+
 }
