@@ -1,3 +1,36 @@
+ /* body {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+ }
+ @keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+} */
+
+body {
+    animation: grow 2s;
+    background-color: black;
+  }
+  
+  @keyframes grow {
+      0% { 
+        transform: scale(.5);
+        opacity: 0; 
+    }
+    80% { 
+        transform: scale(1);
+        opacity: 0.5; }
+    100% { 
+      
+        opacity: 1; }
+  }
+ 
+ 
  p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
@@ -23,29 +56,34 @@
     display: grid;
 }
 
-#intro-div {
-    background-color: hsl(0, 0%, 0%);
+.intro-div {
+    /* background-color: hsl(0, 0%, 0%); */
     color: white;
     padding-left: 20px;
     padding-top: 20px;
     padding-bottom: 10px;
     padding-right: 10px;
-    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: linear-gradient(black 90%, red );
+}
+
+.intro-div p {
     font-size: 30px;
+    text-indent: 1em;
 }
 
 
 
-
-#nav-buttons {
+/* #nav-buttons {
     padding-top: 30px;
     display: block;
     margin: auto;
     text-align: center;
     justify-content: space-between;
    
-}
+} */
 
 button {
     background-color: #f10000; /* Green */
@@ -96,6 +134,11 @@ h2{
 }
 #designing { 
     color: red;
+    font-size: 70px;
+    padding-left: 20px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+
 }
 
 #safeID { 
@@ -103,12 +146,12 @@ h2{
 }
 
 
-#head {
+.head {
     background-color: rgb(33, 31, 32);
     display: grid;
 }
 
-#intro-div {
+/* .intro-div {
     background-color: hsl(0, 0%, 0%);
     color: white;
     padding-left: 20px;
@@ -118,7 +161,7 @@ h2{
     border-radius: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 30px;
-}
+} */
 
 
 
@@ -132,18 +175,19 @@ button:hover {
 
 
   /*Home Page Navigation*/
-  #nav-buttons {
+.nav-buttons {
     padding-top: 30px;
     display: block;
     margin: auto;
     text-align: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+
 }
 
 
 button {
     background-color: #f10000; 
-    border: none;
+    border: solid;
     color: white;
     padding: 15px 32px;
     text-decoration: none;
@@ -151,6 +195,9 @@ button {
     font-size: 40px;
     font-family:monospace;
     transition-duration: 0.4s;
+    border-color: white;
+    border-width: 4px;
+    margin-left: 40px;
 }
 
   /*ABOUT SECTION CSS*/
@@ -166,10 +213,10 @@ button {
     color: white;
     padding-left: 20px;
     padding-top: 20px;
-    margin-top: 400px;
+    /* margin-top: 400px; */
     padding-bottom: 10px;
     padding-right: 10px;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 30px;
 }
@@ -180,4 +227,116 @@ button {
     margin: auto;
     text-align: center;
     justify-content: space-evenly;
+}
+
+
+.video {
+    width: 50%;
+    height: auto;
+}
+
+
+/*The Nice Components*/
+
+.nice-header { 
+    background-color: hsl(0, 0%, 27%);
+}
+
+.nice-header h1 { 
+    background-color: hsl(0, 0%, 27%);
+    text-align: center;
+    font-size: 70px;
+}
+
+.nice {
+  display: flex;
+  background-color: hsl(0, 0%, 27%);
+  width: fit-content;
+
+}
+
+    .nice p {
+        font-family: Arial, Helvetica, sans-serif;
+        grid-row: 2;
+        color: white;
+        padding-left: 10%;
+        font-size: 28px;
+
+    }
+
+        .nice-left {
+            width: 70%;
+            /* order: 0; */
+            display: grid;
+            grid-template-rows: 100px;
+            background-color: rgb(33, 31, 32);
+            height:fit-content;
+            border-radius: 30px;
+            padding: 50px;
+        }
+
+        .nice-left h1 {
+            font-size: 40;
+            text-align: left;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            grid-row: 1;
+            color:#3563a9;
+
+        }
+
+        .nice-left span {
+            color: white;
+        }
+
+        .nice-right {
+            width: auto;
+            height: fit-content;
+            display: grid;
+            grid-template-rows:max-content;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+
+
+        .nice-right img {
+            flex-direction: column;
+            /* border-color: #3563a9; */
+            background-color: red;
+            /* background-image:  linear-gradient(red, rgb(33, 31, 32) 70%); */
+            border-color: transparent;
+            border-radius: 30px;
+            border-style:solid;
+            border-width: 16px;
+            height: 600px;
+            border-color:  red;
+            border-color: blue;
+        }
+
+
+.nice-timeline {
+    display: flexbox;
+    flex-flow: column;
+    width: fit-content;
+    padding-left: 70px;
+    background-color: rgb(33, 31, 32);
+    color: white;
+    border-radius: 50px;
+    transform: translateY(-100px);
+}
+
+.nice-timeline .nice {
+    background-color: rgb(33, 31, 32);
+}
+
+.nice-timeline #timeline-header {
+    background-color: rgb(33, 31, 32);
+    text-align: center;
+    font-size: 70px;
+}
+
+.button-transition {
+    background-image: linear-gradient(red, rgb(33, 31, 32) 70%);
+ 
+    height: 700px;
 }
